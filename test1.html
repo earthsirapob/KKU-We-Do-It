@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Time: <input type="time" id="myTime" value="16:32:55">
+
+<p>Click the button to get the time of the time field.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTime").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

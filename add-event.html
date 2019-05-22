@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Main Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="add-event.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><h3>"KKU-WE-DO-IT | ADMIN"</h3></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="main.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" onclick="logout()" id="logoutBtn">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="event-div" id="event-div">
+            <h3>Add Activities</h3>
+            <input placeholder="Title..." id="title" required/>
+            <form>
+         <select  name = "dropdown" id="typeselect">
+            <option value = "หน่วย 1">หน่วย 1 การพัฒนาศักยภาพตนเอง</option>
+            <option value = "หน่วย 2">หน่วย 2 การธำรงไว้ซึ่งสถาบันชาติ ศาสนา พระมหากษัตริย์ เสริมสร้างจิตสำนึกความภาคภูมิใจในมหาวิทยาลัยและคณะ</option>
+            <option value = "หน่วย 3">หน่วย 3 การเสริมสร้างจิตอาสา และจิตสาธารณะ</option>
+            <option value = "หน่วย 4">หน่วย 4 การสร้างคุณธรรมจริยธรรมและศีลธรรม</option>
+            <option value = "หน่วย 5">หน่วย 5 การอนุรักษ์ศิลปวัฒนธรรมไทยและภูมิปัญญาท้องถิ่น</option>
+         </select>
+      </form>
+<!--
+            <form action="">
+              <input type="radio" name="type" value="1"> หน่วย 1 : การพัฒนาศักยภาพตนเอง<br>
+            <input type="radio" name="type" value="2">  หน่วย 2 : การธำรงไว้ซึ่งสถาบันชาติ ศาสนา พระมหากษัตริย์ เสริมสร้างจิตสำนึกความภาคภูมิใจในมหาวิทยาลัยและคณะ<br>
+              <input type="radio" name="type"  value="other"> หน่วย 3 : การเสริมสร้างจิตอาสา และจิตสาธารณะ<br>
+               <input type="radio" name="type"  value="other">หน่วย 4 : การสร้างคุณธรรมจริยธรรมและศีลธรรม<br>
+               <input type="radio" name="type"  value="other">หน่วย 5 : การอนุรักษ์ศิลปวัฒนธรรมไทยและภูมิปัญญาท้องถิ่น
+            </form>
+-->
+            <input placeholder="Describtion..." id="desc" required/>
+            <input placeholder="Date Start..." type="date" class="date" id="date_st" data-date="" data-date-format="DD/MM/YY" value="" required/>
+            <input placeholder="Date End..." type="date" class="date" id="date_end" data-date="" data-date-format="DD/MM/YY" value="" required/>
+            <input placeholder="Time Start..." id="time_st" type="time" value="" required/>
+            <input placeholder="Time End..." id="time_end" type="time" value="" required/>
+            <input placeholder="Place..." id="place" required/>
+            <input placeholder="Image URL (e.g. https://images.com/pic1.png)" id="img_url" required/>
+            <button onclick="addActivity()">Add activity</button>
+
+        </div>
+
+
+        <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+        <script src="main.js"></script>
+        <script src="add-event.js"></script>
+        <script src="http://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.js"></script>
+        <link href="http://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.css" rel="stylesheet"/>
+    </body>
+</html>

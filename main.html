@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Main Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><h3>"KKU-WE-DO-IT | ADMIN"</h3></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" onclick="logout()" id="logoutBtn">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+       
+       
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="images/img1.jpg" id="pic1">
+                    <div class="carousel-caption">
+                        <h1>Add Event Click Here!</h1>
+                        <br>
+                        <button type="button" class="btn btn-default" onclick="location.href='add-event.html'">Add Event</button>
+                    </div>
+                </div> <!-- End Active -->
+                <div class="item">
+                    <img src="images/img2.jpg" id="pic2">
+                    <div class="carousel-caption">
+                        <h1>Click to see all event</h1>
+                        <br>
+                        <button type="button" class="btn btn-default" onclick="location.href='add-event.html'">All Event</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CONTENT -->
+  <div class="container marketing">
+
+    <hr class="featurette-divider" id="course">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Website Information<span class="text-muted"> </span></h2>
+          <p class="lead">This website was created for  add event in "KKU-We-Do-It" application in Android. It help admin to create event. <br>**Only admin can use this website.**</p>
+      </div>
+      <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" src="images/kkuwedoit.png" alt="Generic placeholder image">
+      </div>
+    </div>
+
+
+    <hr class="featurette-divider" id="kkunews">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <img class="featurette-image img-fluid mx-auto" src="images/member.png" alt="Generic placeholder image">
+      </div>
+      <div class="col-md-5">
+        <h2 class="featurette-heading">Members Group 7<span class="text-muted"></span></h2>
+
+       
+        <p class="lead">สิรวิชญ์ ศรีสุริยานุกูล &nbsp;&nbsp;593040450-0</p>
+        <p class="lead">สุรวิช วิริยะศรีสุวัฒนา &nbsp;&nbsp;593040452-6</p>
+        <p class="lead">สิรภพ จารุธัญลักษณ์ &nbsp;&nbsp;593040738-8</p>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>Create by <a href="https://www.facebook.com/surawit.wiriyasrisuwatthana.7">KAKDEN</a> · Thanks to <a
+            href="https://getbootstrap.com/">Bootstrap</a></p>
+      </footer>
+    </div>
+  </div>
+
+
+        
+        <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
