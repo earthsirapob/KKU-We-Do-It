@@ -34,8 +34,9 @@ function addActivity() {
     firebaseRef.child(activitiesId).child("ev_place").set(place);
     firebaseRef.child(activitiesId).child("ev_timeEn").set(time_end);
     firebaseRef.child(activitiesId).child("ev_timeSt").set(time_st);
-    firebaseRef.child(activitiesId).child("ev_title").set(title+x);
+    firebaseRef.child(activitiesId).child("ev_title").set(x+title);
     alert("Add event Successfully!");
+    window.location="main.html"
 }
 console.log(title);
 
@@ -55,6 +56,12 @@ if(DD<10) {
 if(MM<10) {
     MM='0'+MM;
 }
+
+if(hh<10) {
+    hh='0'+hh;
+}
+
+
 var date = YYYY+'-'+MM+'-'+DD;
 var time = hh + ":" + mm;
 console.log("today : " + date);
