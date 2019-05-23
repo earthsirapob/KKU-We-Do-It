@@ -23,9 +23,9 @@ function addActivity() {
     var firebaseRef = firebase.database().ref("activities");
     console.log(date_st);
     console.log(date_end);
-    // firebaseRef.once('value').then(function(dataSnapshot) {
-    //     console.log(dataSnapshot.val());
-    // });
+    firebaseRef.once('value').then(function(dataSnapshot) {
+        console.log(dataSnapshot.val());
+    });
     var activitiesId = firebase.database().ref().child('posts').push().key;
     firebaseRef.child(activitiesId).child("ev_dateSt").set(date_st);
     firebaseRef.child(activitiesId).child("ev_dateEn").set(date_end);
@@ -36,7 +36,6 @@ function addActivity() {
     firebaseRef.child(activitiesId).child("ev_timeSt").set(time_st);
     firebaseRef.child(activitiesId).child("ev_title").set(x+title);
     alert("Add event Successfully!");
-    // window.location="main.html"
 }
 console.log(title);
 
