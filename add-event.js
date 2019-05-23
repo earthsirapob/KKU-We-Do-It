@@ -61,6 +61,10 @@ if(hh<10) {
     hh='0'+hh;
 }
 
+if(mm<10) {
+    mm='0'+mm;
+}
+
 
 var date = YYYY+'-'+MM+'-'+DD;
 var time = hh + ":" + mm;
