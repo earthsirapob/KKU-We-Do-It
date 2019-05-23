@@ -10,7 +10,7 @@ var allDate = document.getElementsByClassName("time").value;
 var typeTitle = document.getElementById("typeselect");
 
 function addActivity() {
-    var x = "["+typeTitle.value+" ]";
+    var x = "["+typeTitle.value+"]";
     var title = document.getElementById("title").value;
   
     var desc = document.getElementById("desc").value;
@@ -36,6 +36,7 @@ function addActivity() {
     firebaseRef.child(activitiesId).child("ev_timeSt").set(time_st);
     firebaseRef.child(activitiesId).child("ev_title").set(x+title);
     alert("Add event Successfully!");
+    window.location="main.html"
 }
 console.log(title);
 
